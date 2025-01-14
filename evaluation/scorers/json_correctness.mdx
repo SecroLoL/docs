@@ -1,4 +1,7 @@
-# JSON Correctness
+---
+title: JSONCorrectness
+description: ""
+---
 
 The `JSONCorrectness` scorer is a default scorer that checks whether your LLM's `actual_output` matches your JSON schema.
 
@@ -14,7 +17,7 @@ To run the `JSONCorrectness` scorer, you must include the following fields in yo
 
 To define a JSON schema, you can define a `pydantic` `BaseModel` and pass it to the `JSONCorrectness` scorer.
 
-```
+```python example_schema.py
 from pydantic import BaseModel
 
 class SampleSchema(BaseModel):
@@ -24,14 +27,14 @@ class SampleSchema(BaseModel):
 
 $$
 \text{JSONCorrectness} = \begin{cases}
-1 & \text{if } \text{actual\_output} \text{ matches } \text{schema} \\
+1 & \text{if } \text{actual output} \text{ matches } \text{schema} \\
 0 & \text{otherwise}
 \end{cases}
 $$
 
 ## Sample Implementation
 
-```
+```python json_correctness.py
 from judgeval.judgment_client import JudgmentClient
 from judgeval.data import Example
 from judgeval.scorers import JudgmentScorer

@@ -1,15 +1,19 @@
-# Faithfulness 
+---
+title: Faithfulness
+description: ""
+---
 
 The `Faithfulness` scorer is a default LLM judge scorer that measures how factually aligned the `actual_output` is to the `retrieval_context`. 
 In practice, this scorer helps determine the degree to which your RAG pipeline's generator is hallucinating.
 
-TODO plug our evaluation foundation models here
+**For optimal Faithfulness scoring, check out our leading evaluation foundation model research here! TODO add link here.**
 
-`Note:` 
+<Note>
+The `Faithfulness` scorer is similar to but **not identical** to the `Hallucination` scorer. 
 
-The `Faithfulness` scorer is similar to but not identical to the `Hallucination` scorer. 
 `Faithfulness` is concerned with contradictions between the `actual_output` and `retrieval_context`, while `Hallucination` is concerned with `context`. 
-If you're building an app with a RAG pipeline, you should try the `Faithfulness` scorer first. 
+**If you're building an app with a RAG pipeline, you should try the `Faithfulness` scorer first.**
+</Note>
 
 ## Required Fields
 
@@ -20,7 +24,8 @@ To run the `Faithfulness` scorer, you must include the following fields in your 
 
 ## Scorer Breakdown
 
-`Faithfulness` scores are calculated by first extracting all statements in `actual_output` and then classifying which ones are contradicted by the `retrieval_context`. 
+`Faithfulness` scores are calculated by first extracting all statements in `actual_output` and then classifying 
+which ones are contradicted by the `retrieval_context`. 
 A claim is considered faithful if it does not contradict any information in `retrieval_context`.
 
 The score is calculated as:
@@ -31,7 +36,7 @@ $$
 
 ## Sample Implementation
 
-```
+```python faithfulness.py
 from judgeval.judgment_client import JudgmentClient
 from judgeval.data import Example
 from judgeval.scorers import JudgmentScorer
@@ -56,7 +61,7 @@ results = client.run_evaluation(
 print(results)
 ```
 
-`Note:` 
-
+<Note>
 The `Faithfulness` scorer uses an LLM judge, so you'll receive a reason for the score in the `reason` field of the results. 
 This allows you to double-check the accuracy of the evaluation and understand how the score was calculated.
+</Note>

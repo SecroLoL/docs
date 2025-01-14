@@ -1,4 +1,7 @@
-# Tool Correctness
+---
+title: ToolCorrectness
+description: ""
+---
 
 The `ToolCorrectness` scorer is a default scorer that checks whether your LLM correctly calls and uses tools. 
 In practice, this allows you to assess the quality of an LLM agent's tool choice and applied use of tools.
@@ -23,7 +26,7 @@ TODO add more docs here regarding tool ordering, exact match, or even correct to
 
 ## Sample Implementation 
 
-```
+```python tool_correctness.py
 from judgeval.judgment_client import JudgmentClient
 from judgeval.data import Example
 from judgeval.scorers import JudgmentScorer

@@ -1,11 +1,15 @@
-# Hallucination
+---
+title: Hallucination
+description: ""
+---
 
 The `Hallucination` scorer is a default LLM judge scorer that measures how much the `actual_output` contains information that contradicts the `context`.
 
-`Note:` 
-
-If you're building an app with a RAG pipeline, you should try the `Faithfulness` scorer instead. 
+<Note>
+**If you're building an app with a RAG pipeline, you should try the `Faithfulness` scorer instead.**
+ 
 The `Hallucination` scorer is concerned with `context`, the ideal retrieved context, while `Faithfulness` is concerned with `retrieval_context`, the actual retrieved context. 
+</Note>
 
 ## Required Fields
 
@@ -25,7 +29,7 @@ $$
 
 ## Sample Implementation
 
-```
+```python hallucination.py
 from judgeval.judgment_client import JudgmentClient
 from judgeval.data import Example
 from judgeval.scorers import JudgmentScorer
