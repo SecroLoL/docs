@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Judgment",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
@@ -18,7 +18,11 @@
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "url": "mailto:contact@judgmentlabs.ai"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/judgmentlabs"
     }
   ],
   "topbarCtaButton": {
@@ -27,34 +31,54 @@
   },
   "tabs": [
     {
-      "name": "API Reference",
+      "name": "Tutorials",
       "url": "api-reference"
-    }
-  ],
-  "anchors": [
-    {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
-    },
-    {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
     },
     {
       "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "url": "https://judgmentlabs.ai/"
     }
+  ],
+  "anchors": [
+    
   ],
   "navigation": [
     {
-      "group": "Get Started",
+      "group": "Welcome!",
       "pages": [
         "introduction",
-        "quickstart",
-        "development"
+        "getting_started"
+      ]
+    },
+    {
+      "group": "Evaluation",
+      "pages": [
+        "evaluation/introduction",
+        "evaluation/data_examples",
+        "evaluation/data_datasets",
+        {
+          "group": "Scorers",
+          "pages": [
+            "evaluation/scorers/introduction",
+            "evaluation/scorers/answer_relevancy",
+            "evaluation/scorers/contextual_precision",
+            "evaluation/scorers/contextual_recall",
+            "evaluation/scorers/contextual_relevancy",
+            "evaluation/scorers/faithfulness",
+            "evaluation/scorers/hallucination",
+            "evaluation/scorers/json_correctness",
+            "evaluation/scorers/summarization",
+            "evaluation/scorers/tool_correctness",
+            "evaluation/scorers/custom_scorers",
+            "evaluation/scorers/classifier_scorer"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Judgment Platform",
+      "pages": [
+        "judgment/introduction"
       ]
     },
     {
@@ -67,25 +91,11 @@
         "essentials/navigation",
         "essentials/reusable-snippets"
       ]
-    },
-    {
-      "group": "API Documentation",
-      "pages": [
-        "api-reference/introduction"
-      ]
-    },
-    {
-      "group": "Endpoint Examples",
-      "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
-      ]
     }
   ],
   "footerSocials": {
-    "x": "https://x.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://linkedin.com/company/mintlify"
+    "x": "https://x.com/judgmentlabs",
+    "github": "https://github.com/judgmentlabs",
+    "linkedin": "https://linkedin.com/company/judgmentlabs"
   }
 }
