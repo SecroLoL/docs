@@ -72,7 +72,8 @@
             "evaluation/scorers/custom_scorers",
             "evaluation/scorers/classifier_scorer"
           ]
-        }
+        },
+        "evaluation/judges"
       ]
     },
     {
